@@ -14,7 +14,7 @@ pipeline {
             }
         }
     } */
-    agent { docker { image 'node:16.17.1-alpine' } }
+    agent any
     stages {
         stage('Iniciando..'){
             steps{
