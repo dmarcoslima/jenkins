@@ -17,7 +17,9 @@ pipeline {
     agent { docker { image 'node:16.17.1-alpine' } }
     stages {
         stage('Iniciando..'){
-            echo 'Pipe sendo iniciada..'
+            steps{
+                echo 'Pipe sendo iniciada..'
+            }
         }
 
         stage('build') {
@@ -27,7 +29,9 @@ pipeline {
         }
 
         stage('finalizando..'){
-            echo 'Pipe sendo finalizada..'
+            steps{
+                echo 'Pipe sendo finalizada..'
+            }
         }
     }
 }
