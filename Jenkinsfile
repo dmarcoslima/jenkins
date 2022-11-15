@@ -24,7 +24,7 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'git --version'
+                bat 'git --version'
             }
         }
 
