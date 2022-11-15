@@ -16,7 +16,7 @@ pipeline {
     } */
     agent any
     stages {
-        stage('Iniciando..'){
+        stage('Private repos..'){
             steps{
                 echo 'Pipe sendo iniciada..'
             }
