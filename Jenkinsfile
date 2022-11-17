@@ -1,19 +1,5 @@
 /* Requires the Docker Pipeline plugin */
-pipeline {
-    /* agent any
-    stages {
-        stage('Iniciando..') {
-            steps { 
-                echo 'Iniciando pipeline'
-            }
-        }
-
-        stage('second stage'){
-            steps{
-                echo 'Iniciando o segundo estagio'
-            }
-        }
-    } */
+/* pipeline {
     agent any
     stages {
         stage('Private repos..'){
@@ -31,6 +17,18 @@ pipeline {
         stage('finalizando..'){
             steps{
                 echo 'Pipe sendo finalizada..'
+            }
+        }
+    }
+} */
+Jenkinsfile (Declarative Pipeline)
+/* Requires the Docker Pipeline plugin */
+pipeline {
+    agent { docker { image 'maven:3.8.6-openjdk-11-slim' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
             }
         }
     }
