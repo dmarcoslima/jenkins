@@ -24,7 +24,7 @@ pipeline {
 
         stage('build') {
             steps {
-                bat 'kubectl get pods'
+                bat 'docker ps'
             }
         }
 
