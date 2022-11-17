@@ -23,11 +23,11 @@
 } */
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent  { docker { image 'maven:3.8.6-openjdk-11-slim' } } 
+    agent { docker { image 'node:16.17.1-alpine' } }
     stages {
         stage('build') {
             steps {
-                bat 'mvn --version'
+                sh 'node --version'
             }
         }
     }
