@@ -27,7 +27,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'git --version'
+                sh 'docker ps -a'
             }
         }
     }
