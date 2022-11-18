@@ -23,7 +23,7 @@
 } */
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:16.17.1-alpine' } }
+    agent { docker { image 'portalparceiroclient:0.6' } }
     stages {
         stage('build') {
             steps {
