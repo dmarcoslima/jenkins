@@ -27,7 +27,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'node --version'
+                bat 'git --version'
             }
         }
     }
